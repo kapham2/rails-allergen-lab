@@ -1,0 +1,13 @@
+<h1>Users#show</h1>
+
+<p>Name: <%= @user.name %></p>
+
+<ul>
+<% @user.recipes.each do |recipe|%>
+    <li><%= recipe.name %></li>
+<% end %>
+</ul>
+
+<%= form_tag user_path, method: :delete do %>
+    <%= button_tag 'Delete' %>
+<% end %>

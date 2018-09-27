@@ -1,0 +1,9 @@
+<h1>Ingredients#show</h1>
+
+<p>Ingredient: <%= @ingredient.name.capitalize %></p>
+
+<ul>
+<% @ingredient.recipes.each do |recipe| %>
+    <li><%= recipe.name %></li>
+<% end%>
+</ul>

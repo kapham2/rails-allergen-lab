@@ -1,0 +1,9 @@
+<h1>Recipes#index</h1>
+
+<% @recipes.each do |recipe| %>
+    <p><%= recipe.name %> has <%= recipe.ingredients.count %> ingredients</p>
+<% end %>
+
+<%= form_tag(recipes_path, method: "get") do %>
+  <%= submit_tag("Unsort") %>
+<% end %>
